@@ -209,11 +209,7 @@ class ListEstoque(QMainWindow):
         # self.table.horizontalHeader().setSectionResizeMode(1, QHeaderView.Stretch)
 
         self.cursor = conexao.banco.cursor()
-        # comando_sql = "SELECT a.codigo, a.descricao, b.preco, e.estoque, e.ultupdate FROM controle_clientes.produtos" \
-        #               " as a" \
-        #               " LEFT JOIN controle_clientes.precos as b on b.idprecos = a.codigo" \
-        #               " LEFT JOIN controle_clientes.estoque as e ON e.idproduto = a.codigo;"
-
+       
         comando_sql = """
                       select
                         idproduto,
@@ -281,6 +277,11 @@ class ListEstoque(QMainWindow):
         btn_ac_search.triggered.connect(self.search)
         btn_ac_search.setStatusTip("Pesquisar")
         toolbar.addAction(btn_ac_search)
+
+        btn_ac_sair = QAction(QIcon("src/main/icons/Icones/sair.png"), "Sair", self)
+        btn_ac_sair.triggered.connect(lambda: self.hide())
+        btn_ac_sair.setStatusTip("Sair ")
+        toolbar.addAction(btn_ac_sair)
 
         self.show()
 
@@ -699,6 +700,11 @@ class ListProdutos(QMainWindow):
         btn_ac_search.setStatusTip("Pesquisar")
         toolbar.addAction(btn_ac_search)
 
+        btn_ac_sair = QAction(QIcon("src/main/icons/Icones/sair.png"), "Sair", self)
+        btn_ac_sair.triggered.connect(lambda: self.hide())
+        btn_ac_sair.setStatusTip("Sair ")
+        toolbar.addAction(btn_ac_sair)
+
         self.show()
 
     def loaddata(self):
@@ -916,7 +922,7 @@ class ListClientes(QMainWindow):
         toolbar.addAction(btn_ac_delete)
 
         btn_ac_sair = QAction(QIcon("src/main/icons/Icones/sair.png"), "Sair", self)
-        # btn_ac_sair.triggered.connect(self.fechaTela)
+        btn_ac_sair.triggered.connect(lambda: self.hide())
         btn_ac_sair.setStatusTip("Sair ")
         toolbar.addAction(btn_ac_sair)
 
@@ -1817,6 +1823,11 @@ class ListPedidos(QMainWindow):
         btn_ac_refresch.setStatusTip("Atualizar")
         toolbar.addAction(btn_ac_refresch)
 
+        btn_ac_sair = QAction(QIcon("src/main/icons/Icones/sair.png"), "Sair", self)
+        btn_ac_sair.triggered.connect(lambda: self.hide())
+        btn_ac_sair.setStatusTip("Sair ")
+        toolbar.addAction(btn_ac_sair)
+
         self.show()
         self.loaddatapedido()
 
@@ -1938,7 +1949,7 @@ class MainWindow(QMainWindow):
         btn_ac_pedido.triggered.connect(self.listPedido)
         file_menu.addAction(btn_ac_pedido)
 
-        btn_ac_estoque = QAction(QIcon("icons/src/main/icons/Icones/estoque.png"), "Lista/Cadastro Estoque", self)
+        btn_ac_estoque = QAction(QIcon("src/main/icons/Icones/estoque.png"), "Lista/Cadastro Estoque", self)
         btn_ac_estoque.triggered.connect(self.listEstoque)
         file_menu.addAction(btn_ac_estoque)
 
@@ -2088,6 +2099,7 @@ class LoginForm(QWidget):
 
         label_senha = QLabel('<font size="4"> Senha </font>')
         self.lineEdit_senha = QLineEdit()
+        self.lineEdit_senha.setEchoMode(QLineEdit.Password)
         self.lineEdit_senha.setPlaceholderText('sua senha aqui')
         layout.addWidget(label_senha, 1, 0)
         layout.addWidget(self.lineEdit_senha, 1, 1)
@@ -2129,14 +2141,9 @@ class LoginForm(QWidget):
 
 if __name__ == '__main__':
     appctxt = ApplicationContext()       # 1. Instantiate ApplicationContext
-    # window = QMainWindow()
-    # window.resize(250, 150)
-    # window.show()
-
+    
     if QDialog.Accepted:
         form = LoginForm()
         form.show()
-
-
     exit_code = appctxt.app.exec_()      # 2. Invoke appctxt.app.exec_()
     sys.exit(exit_code)
