@@ -43,7 +43,7 @@ class AboutDialog(QDialog):
 
         # Configurações de atribuição de imagem
         labelpic = QLabel()
-        pixmap = QPixmap('src/main/icons/Icones/perfil.png')
+        pixmap = QPixmap('Icones/perfil.png')
         # pixmap = pixmap.scaledToWidth(400)
         pixmap = pixmap.scaled(QSize(500, 500))
         labelpic.setPixmap(pixmap)
@@ -263,22 +263,22 @@ class ListEstoque(QMainWindow):
         self.setStatusBar(statusbar)
 
         # botões do menu
-        btn_ac_adduser = QAction(QIcon("src/main/icons/Icones/add.png"), "Cadastro Estoque", self)
+        btn_ac_adduser = QAction(QIcon("Icones/add.png"), "Cadastro Estoque", self)
         btn_ac_adduser.triggered.connect(self.cadEstoque)
         btn_ac_adduser.setStatusTip("Clientes")
         toolbar.addAction(btn_ac_adduser)
 
-        btn_ac_refresch = QAction(QIcon("src/main/icons/Icones/atualizar.png"), "Atualizar dados do Estoque", self)
+        btn_ac_refresch = QAction(QIcon("Icones/atualizar.png"), "Atualizar dados do Estoque", self)
         btn_ac_refresch.triggered.connect(self.loaddata)
         btn_ac_refresch.setStatusTip("Atualizar")
         toolbar.addAction(btn_ac_refresch)
 
-        btn_ac_search = QAction(QIcon("src/main/icons/Icones/pesquisa.png"), "Pesquisar Produtos em Estoque", self)
+        btn_ac_search = QAction(QIcon("Icones/pesquisa.png"), "Pesquisar Produtos em Estoque", self)
         btn_ac_search.triggered.connect(self.search)
         btn_ac_search.setStatusTip("Pesquisar")
         toolbar.addAction(btn_ac_search)
 
-        btn_ac_sair = QAction(QIcon("src/main/icons/Icones/sair.png"), "Sair", self)
+        btn_ac_sair = QAction(QIcon("Icones/sair.png"), "Sair", self)
         btn_ac_sair.triggered.connect(lambda: self.hide())
         btn_ac_sair.setStatusTip("Sair ")
         toolbar.addAction(btn_ac_sair)
@@ -631,7 +631,7 @@ class CadastroProdutos(QDialog):
 class ListProdutos(QMainWindow):
     def __init__(self):
         super(ListProdutos, self).__init__()
-        self.setWindowIcon(QIcon('src/main/icons/Icones/produtos2.png'))
+        self.setWindowIcon(QIcon('Icones/produtos2.png'))
 
         self.setWindowTitle("SCC - SISTEMA DE CONTROLE DE PRODUTOS")
         self.setMinimumSize(800, 600)
@@ -680,27 +680,27 @@ class ListProdutos(QMainWindow):
         self.setStatusBar(statusbar)
 
         # botões do menu
-        btn_ac_adduser = QAction(QIcon("src/main/icons/Icones/add.png"), "Add Produto", self) # src/main/icons/Icones/add.png
+        btn_ac_adduser = QAction(QIcon("Icones/add.png"), "Add Produto", self) # src/main/icons/Icones/add.png
         btn_ac_adduser.triggered.connect(self.cadProdutos)
         btn_ac_adduser.setStatusTip("Add Produto")
         toolbar.addAction(btn_ac_adduser)
 
-        btn_ac_refresch = QAction(QIcon("src/main/icons/Icones/atualizar.png"), "Atualizar dados do produto", self)
+        btn_ac_refresch = QAction(QIcon("Icones/atualizar.png"), "Atualizar dados do produto", self)
         btn_ac_refresch.triggered.connect(self.loaddata)
         btn_ac_refresch.setStatusTip("Atualizar")
         toolbar.addAction(btn_ac_refresch)
 
-        btn_ac_delete = QAction(QIcon("src/main/icons/Icones/deletar.png"), "Deletar o Produto", self)
+        btn_ac_delete = QAction(QIcon("Icones/deletar.png"), "Deletar o Produto", self)
         btn_ac_delete.triggered.connect(self.delete)
         btn_ac_delete.setStatusTip("Deletar ")
         toolbar.addAction(btn_ac_delete)
 
-        btn_ac_search = QAction(QIcon("src/main/icons/Icones/pesquisa.png"), "Pesquisar dados por produto", self)
+        btn_ac_search = QAction(QIcon("Icones/pesquisa.png"), "Pesquisar dados por produto", self)
         btn_ac_search.triggered.connect(self.search)
         btn_ac_search.setStatusTip("Pesquisar")
         toolbar.addAction(btn_ac_search)
 
-        btn_ac_sair = QAction(QIcon("src/main/icons/Icones/sair.png"), "Sair", self)
+        btn_ac_sair = QAction(QIcon("Icones/sair.png"), "Sair", self)
         btn_ac_sair.triggered.connect(lambda: self.hide())
         btn_ac_sair.setStatusTip("Sair ")
         toolbar.addAction(btn_ac_sair)
@@ -901,27 +901,27 @@ class ListClientes(QMainWindow):
         self.setStatusBar(statusbar)
 
         # botões do menu
-        btn_ac_adduser = QAction(QIcon("src/main/icons/Icones/add.png"), "Cadastro de Cliente", self)
+        btn_ac_adduser = QAction(QIcon("Icones/add.png"), "Cadastro de Cliente", self)
         btn_ac_adduser.triggered.connect(self.cadClientes)
         btn_ac_adduser.setStatusTip("Clientes")
         toolbar.addAction(btn_ac_adduser)
 
-        btn_ac_refresch = QAction(QIcon("src/main/icons/Icones/atualizar.png"), "Atualizar dados do Cliente", self)
+        btn_ac_refresch = QAction(QIcon("Icones/atualizar.png"), "Atualizar dados do Cliente", self)
         btn_ac_refresch.triggered.connect(self.loaddata)
         btn_ac_refresch.setStatusTip("Atualizar")
         toolbar.addAction(btn_ac_refresch)
 
-        btn_ac_search = QAction(QIcon("src/main/icons/Icones/pesquisa.png"), "Pesquisar dados por Cliente", self)
+        btn_ac_search = QAction(QIcon("Icones/pesquisa.png"), "Pesquisar dados por Cliente", self)
         btn_ac_search.triggered.connect(self.search)
         btn_ac_search.setStatusTip("Pesquisar")
         toolbar.addAction(btn_ac_search)
 
-        btn_ac_delete = QAction(QIcon("src/main/icons/Icones/deletar.png"), "Deletar o Cliente", self)
+        btn_ac_delete = QAction(QIcon("Icones/deletar.png"), "Deletar o Cliente", self)
         btn_ac_delete.triggered.connect(self.delete)
         btn_ac_delete.setStatusTip("Deletar ")
         toolbar.addAction(btn_ac_delete)
 
-        btn_ac_sair = QAction(QIcon("src/main/icons/Icones/sair.png"), "Sair", self)
+        btn_ac_sair = QAction(QIcon("Icones/sair.png"), "Sair", self)
         btn_ac_sair.triggered.connect(lambda: self.hide())
         btn_ac_sair.setStatusTip("Sair ")
         toolbar.addAction(btn_ac_sair)
@@ -1175,25 +1175,25 @@ class DataEntryForm(QWidget):
         self.layoutRight.addWidget(self.lbl_total)
 
         self.buttonAdd = QPushButton("Add.", self)
-        self.buttonAdd.setIcon(QIcon("src/main/icons/Icones/add.png"))
+        self.buttonAdd.setIcon(QIcon("Icones/add.png"))
         self.buttonAdd.setIconSize(QSize(40, 40))
         self.buttonAdd.setMinimumHeight(40)
         self.buttonAdd.setEnabled(False)
 
         self.buttonClear = QPushButton("Canc.", self)
-        self.buttonClear.setIcon(QIcon("src/main/icons/Icones/clear.png"))
+        self.buttonClear.setIcon(QIcon("Icones/clear.png"))
         self.buttonClear.setIconSize(QSize(40, 40))
         self.buttonClear.setMinimumHeight(40)
         # self.buttonClear.setEnabled(False)
 
         self.buttonClearOne = QPushButton("Rem.", self)
-        self.buttonClearOne.setIcon(QIcon("src/main/icons/Icones/clear.png"))
+        self.buttonClearOne.setIcon(QIcon("Icones/clear.png"))
         self.buttonClearOne.setIconSize(QSize(40, 40))
         self.buttonClearOne.setMinimumHeight(40)
         # self.buttonClearOne.setEnabled(False)
 
         self.buttongerar = QPushButton("Gerar", self)
-        self.buttongerar.setIcon(QIcon("src/main/icons/Icones/dollars.png"))
+        self.buttongerar.setIcon(QIcon("Icones/dollars.png"))
         self.buttongerar.setIconSize(QSize(40, 40))
         self.buttongerar.setMinimumHeight(40)
         self.buttongerar.setEnabled(False)
@@ -1205,7 +1205,7 @@ class DataEntryForm(QWidget):
         # # self.butotnCupon.setEnabled(False)
 
         self.buttonQuit = QPushButton("Sair  ", self)
-        self.buttonQuit.setIcon(QIcon("src/main/icons/Icones/sair.png"))
+        self.buttonQuit.setIcon(QIcon("Icones/sair.png"))
         self.buttonQuit.setIconSize(QSize(40, 40))
         self.buttonQuit.setMinimumHeight(40)
 
@@ -1412,7 +1412,7 @@ class DataEntryForm(QWidget):
         self.cursor.execute(comando_sql)
         result_data = self.cursor.fetchall()
         for i in range(len(result_data)):
-            print(result_data[i][1])
+            # print(result_data[i][1])
             if nr_caixa == result_data[i][1]:
                 nr_caixa += 1
             else:
@@ -1464,8 +1464,7 @@ class EfetivaPedidoCaixa(QDialog):
         super(EfetivaPedidoCaixa, self).__init__()
 
         totaliza = ('${0:.2f}'.format(fechamento))
-        n_caixa = nr_caixa
-        print("Parametro", n_caixa)
+        n_caixa = nr_caixa       
 
         # Configurações do titulo da Janela
         self.setWindowTitle("RECEBER R$:")
@@ -1505,7 +1504,7 @@ class EfetivaPedidoCaixa(QDialog):
         layout.addWidget(self.lbl_troco)
 
         self.buttonreceber = QPushButton("Receber", self)
-        self.buttonreceber.setIcon(QIcon("src/main/icons/Icones/dollars.png"))
+        self.buttonreceber.setIcon(QIcon("Icones/dollars.png"))
         self.buttonreceber.setIconSize(QSize(40, 40))
         self.buttonreceber.setMinimumHeight(40)
         self.buttonreceber.clicked.connect(lambda: self.receber(totalizando))
@@ -1513,7 +1512,7 @@ class EfetivaPedidoCaixa(QDialog):
         layout.addWidget(self.buttonreceber)
 
         self.buttonfinalizar = QPushButton("Finalizar", self)
-        self.buttonfinalizar.setIcon(QIcon("src/main/icons/Icones/carrinho.png"))
+        self.buttonfinalizar.setIcon(QIcon("Icones/carrinho.png"))
         self.buttonfinalizar.setIconSize(QSize(40, 40))
         self.buttonfinalizar.setMinimumHeight(40)
         self.buttonfinalizar.clicked.connect(lambda: self.finalizar(n_caixa))
@@ -1593,7 +1592,7 @@ class Imprimir(QWidget):
         self.left = 100
         self.width = 640
         self.height = 480
-        self.setWindowIcon(QIcon("src/main/icons/Icones/impressora.png"))
+        self.setWindowIcon(QIcon("Icones/impressora.png"))
         self.setLayout(self.vbox)
 
         self.cursor = conexao.banco.cursor()
@@ -1675,7 +1674,7 @@ class Imprimir(QWidget):
                 for sub in range(len(self.a)):
                     total += float(self.a[sub][4])
 
-                print(self.rw)
+                # print(self.rw)
                 msg.close()
         except Exception as e:
             self.errors(e)
@@ -1745,7 +1744,7 @@ class Imprimir(QWidget):
 class ListPedidos(QMainWindow):
     def __init__(self):
         super(ListPedidos, self).__init__()
-        self.setWindowIcon(QIcon('src/main/icons/Icones/produtos.png'))
+        self.setWindowIcon(QIcon('Icones/produtos.png'))
 
         self.setWindowTitle("SCC - SISTEMA DE CONTROLE DE PEDIDOS")
         self.setMinimumSize(800, 600)
@@ -1818,12 +1817,12 @@ class ListPedidos(QMainWindow):
         self.setStatusBar(statusbar)
         # botões do menu
 
-        btn_ac_refresch = QAction(QIcon("src/main/icons/Icones/atualizar.png"), "Atualizar dados da Lista de Pedidos", self)
+        btn_ac_refresch = QAction(QIcon("Icones/atualizar.png"), "Atualizar dados da Lista de Pedidos", self)
         btn_ac_refresch.triggered.connect(self.loaddatapedido)
         btn_ac_refresch.setStatusTip("Atualizar")
         toolbar.addAction(btn_ac_refresch)
 
-        btn_ac_sair = QAction(QIcon("src/main/icons/Icones/sair.png"), "Sair", self)
+        btn_ac_sair = QAction(QIcon("Icones/sair.png"), "Sair", self)
         btn_ac_sair.triggered.connect(lambda: self.hide())
         btn_ac_sair.setStatusTip("Sair ")
         toolbar.addAction(btn_ac_sair)
@@ -1888,7 +1887,7 @@ class MainWindow(QMainWindow):
     def __init__(self, w):
         super(MainWindow, self).__init__()
 
-        self.setWindowIcon(QIcon('src/main/icons/Icones/perfil.png'))
+        self.setWindowIcon(QIcon("Icones/perfil.png"))
 
         # cria um menu
         file_menu = self.menuBar().addMenu("&Arquivo")
@@ -1905,68 +1904,68 @@ class MainWindow(QMainWindow):
         statusbar = QStatusBar()
         self.setStatusBar(statusbar)
 
-        # botões do menu
-        btn_ac_adduser = QAction(QIcon("src/main/icons/Icones/clientes.png"), "Listar/Cadastrar de Cliente", self)
+        # botões do menu src/main/python/Icones/clientes.png
+        btn_ac_adduser = QAction(QIcon("Icones/clientes.png"), "Listar/Cadastrar Cliente", self)
         btn_ac_adduser.triggered.connect(self.listClientes)
         btn_ac_adduser.setStatusTip("Clientes")
         toolbar.addAction(btn_ac_adduser)
 
-        btn_ac_produto = QAction(QIcon("src/main/icons/Icones/produtos2.png"), "Lista/Cadastrar Produtos", self)
+        btn_ac_produto = QAction(QIcon("Icones/produtos2.png"), "Lista/Cadastrar Produtos", self)
         btn_ac_produto.triggered.connect(self.listProdutos)
         btn_ac_produto.setStatusTip("Produtos")
         toolbar.addAction(btn_ac_produto)
 
-        btn_ac_estoque = QAction(QIcon("src/main/icons/Icones/estoque.png"), "Lista/Cadastro Estoque", self)
+        btn_ac_estoque = QAction(QIcon("Icones/estoque.png"), "Lista/Cadastro Estoque", self)
         btn_ac_estoque.triggered.connect(self.listEstoque)
         btn_ac_estoque.setStatusTip("Estoque")
         toolbar.addAction(btn_ac_estoque)
 
-        btn_ac_caixa = QAction(QIcon("src/main/icons/Icones/dollars.png"), "Caixa - abre o Caixa", self)
+        btn_ac_caixa = QAction(QIcon("Icones/dollars.png"), "Caixa - abre o Caixa", self)
         btn_ac_caixa.triggered.connect(self.caixa)
         btn_ac_caixa.setStatusTip("Caixa")
         toolbar.addAction(btn_ac_caixa)
 
-        btn_ac_pedido = QAction(QIcon("src/main/icons/Icones/produtos.png"), "Listar Pedidos", self)
+        btn_ac_pedido = QAction(QIcon("Icones/produtos.png"), "Listar Pedidos", self)
         btn_ac_pedido.triggered.connect(self.listPedido)
         btn_ac_pedido.setStatusTip("Pedidos")
         toolbar.addAction(btn_ac_pedido)
 
-        btn_ac_fechar = QAction(QIcon("src/main/icons/Icones/sair.png"), "Sair", self)
+        btn_ac_fechar = QAction(QIcon("Icones/sair.png"), "Sair", self)
         btn_ac_fechar.triggered.connect(self.fechaTela)
         btn_ac_fechar.setStatusTip("Sair")
         toolbar.addAction(btn_ac_fechar)
 
         # Arquivo >> Adicionar
-        adduser_action = QAction(QIcon("src/main/icons/Icones/clientes.png"), "Listar/Cadastrar de Cliente", self)
+        adduser_action = QAction(QIcon("Icones/clientes.png"), "Listar/Cadastrar Clientes", self)
         adduser_action.triggered.connect(self.listClientes)
         file_menu.addAction(adduser_action)
 
-        btn_ac_produto = QAction(QIcon("src/main/icons/Icones/produtos2.png"), "Listar/Cadastrar Produtos", self)
+        btn_ac_produto = QAction(QIcon("Icones/produtos2.png"), "Listar/Cadastrar Produtos", self)
         btn_ac_produto.triggered.connect(self.listProdutos)
         file_menu.addAction(btn_ac_produto)
 
-        btn_ac_pedido = QAction(QIcon("src/main/icons/Icones/produtos.png"), "Listar Pedidos", self)
+        btn_ac_pedido = QAction(QIcon("Icones/produtos.png"), "Listar Pedidos", self)
         btn_ac_pedido.triggered.connect(self.listPedido)
         file_menu.addAction(btn_ac_pedido)
 
-        btn_ac_estoque = QAction(QIcon("src/main/icons/Icones/estoque.png"), "Lista/Cadastro Estoque", self)
+        btn_ac_estoque = QAction(QIcon("Icones/estoque.png"), "Lista/Cadastro Estoque", self)
         btn_ac_estoque.triggered.connect(self.listEstoque)
         file_menu.addAction(btn_ac_estoque)
 
-        btn_ac_caixa = QAction(QIcon("src/main/icons/Icones/dollars.png"), "Caixa", self)
+        btn_ac_caixa = QAction(QIcon("Icones/dollars.png"), "Caixa", self)
         btn_ac_caixa.triggered.connect(self.caixa)
         file_menu.addAction(btn_ac_caixa)
 
-        btn_ac_Cupon = QAction(QIcon("src/main/icons/Icones/impressora.png"), "Imprimir Cupon", self)
+        btn_ac_Cupon = QAction(QIcon("Icones/impressora.png"), "Imprimir Cupon", self)
         btn_ac_Cupon.triggered.connect(self.cupon)
         file_menu.addAction(btn_ac_Cupon)
 
-        btn_ac_fechar = QAction(QIcon("src/main/icons/Icones/sair.png"), "Sair", self)
+        btn_ac_fechar = QAction(QIcon("Icones/sair.png"), "Sair", self)
         btn_ac_fechar.setShortcut('Ctrl+Q')
         btn_ac_fechar.triggered.connect(self.fechaTela)
         file_menu.addAction(btn_ac_fechar)
 
-        about_action = QAction(QIcon("src/main/icons/Icones/sobre-nos.png"), "Desenvolvedores", self)
+        about_action = QAction(QIcon("Icones/sobre-nos.png"), "Desenvolvedores", self)
         about_action.triggered.connect(self.about)
         help_menu.addAction(about_action)
 
